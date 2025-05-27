@@ -1,0 +1,113 @@
+.controls button {
+  margin: 0 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Display styling for editable + printable labels */
+.label-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  margin-bottom: -1px;
+}
+
+.sheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0px;
+  padding: 1cm;
+  width: 21cm; /* A4 width */
+  height: 29.7cm; /* A4 height */
+  box-sizing: border-box;
+}
+
+.label {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Brush Script MT", cursive;
+  height: 3.5cm;
+  width: 4.5cm;
+  text-align: center;
+  padding: 4px;
+  box-sizing: border-box;
+  margin-bottom: -1px;
+}
+
+.label-input {
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  font-family: "Brush Script MT", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.label-text {
+  display: none;
+}
+
+/* Print styling */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .label-input {
+    display: none;
+  }
+
+  .label-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Brush Script MT", cursive;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .label-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    /* height: 3.5cm;
+      /* width: 4.5cm; */
+    border: none !important;
+    margin-bottom: -1px;
+  }
+
+  .sheet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 0px;
+    padding: 0cm;
+    column-gap: 0.3cm;
+    /* width: 40cm;
+      height: 29.7cm; */
+    box-sizing: border-box;
+    margin-left: -0.6cm; /* Adjust this value as needed */
+  }
+}

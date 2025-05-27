@@ -1,0 +1,66 @@
+/* HiringDetail.css */
+
+.job-detail-container {
+  background: linear-gradient(to right, #f9fafb, #ffffff);
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+}
+
+.job-detail-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.job-detail-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.job-detail-meta {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.job-divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.job-detail-description {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.manager-credit {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.manager-name {
+  font-weight: 600;
+  color: #1d4ed8;
+}

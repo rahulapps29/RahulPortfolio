@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Which gas is evolved when an acid reacts with a metal?",
+    "options": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "What is the chemical formula for quicklime?",
+    "options": ["CaCO₃", "CaO", "Ca(OH)₂", "CaCl₂"],
+    "answer": "CaO"
+  },
+  {
+    "question": "Which acid is present in vinegar?",
+    "options": [
+      "Hydrochloric acid",
+      "Sulphuric acid",
+      "Nitric acid",
+      "Acetic acid"
+    ],
+    "answer": "Acetic acid"
+  },
+  {
+    "question": "What is the pH value of a neutral solution?",
+    "options": ["0", "7", "14", "1"],
+    "answer": "7"
+  },
+  {
+    "question": "Which element is common in all acids?",
+    "options": ["Oxygen", "Nitrogen", "Hydrogen", "Sulfur"],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "What is the chemical name of baking soda?",
+    "options": [
+      "Sodium bicarbonate",
+      "Calcium carbonate",
+      "Ammonium chloride",
+      "Sodium chloride"
+    ],
+    "answer": "Sodium bicarbonate"
+  },
+  {
+    "question": "Which metal is liquid at room temperature?",
+    "options": ["Gold", "Mercury", "Iron", "Aluminium"],
+    "answer": "Mercury"
+  },
+  {
+    "question": "Litmus turns _______ in acid.",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "answer": "Red"
+  },
+  {
+    "question": "What is the chemical formula of water?",
+    "options": ["H2O", "CO2", "NaCl", "HCl"],
+    "answer": "H2O"
+  },
+  {
+    "question": "Which of these is not a noble gas?",
+    "options": ["Helium", "Neon", "Argon", "Hydrogen"],
+    "answer": "Hydrogen"
+  }
+]

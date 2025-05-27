@@ -1,0 +1,61 @@
+/* Hiring.css */
+.hiring-container {
+  background: linear-gradient(to right, #eef2f3, #ffffff);
+  padding: 3rem 2rem;
+  min-height: 100vh;
+}
+
+.hiring-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.job-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.job-meta {
+  margin-top: 0.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.job-desc {
+  margin-top: 1rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.view-link {
+  margin-top: 1.5rem;
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.view-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
