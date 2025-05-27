@@ -13,8 +13,8 @@ export const links = [
   { id: nanoid(), href: "/", text: "Home" },
   { id: nanoid(), href: "/skills", text: "skills" },
   { id: nanoid(), href: "/about", text: "about" },
+  { id: nanoid(), href: "/resume", text: "resume" },
   { id: nanoid(), href: "/projects", text: "projects" },
-  // { id: nanoid(), href: "/hiring", text: "Hiring" },
 ];
 
 export const skills = [

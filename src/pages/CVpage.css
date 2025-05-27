@@ -1,0 +1,208 @@
+/* CVPage.css - Professional Gradient Theme */
+:root {
+  --primary-color: #3a7bd5; /* Main blue */
+  --primary-gradient: linear-gradient(to right, #f0fff0, #e0ffe0);
+  --secondary-color: #2c3e50; /* Dark blue */
+  --accent-color: #4a6fa5; /* Medium blue */
+  --light-bg: #f5f7fa; /* Light background */
+  --text-color: #333; /* Main text */
+  --muted-text: #7f8c8d; /* Secondary text */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 20px;
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 30px;
+  margin: -40px -40px 40px -40px;
+  border-radius: 8px 8px 0 0;
+}
+
+.cv-header h1 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+  font-size: 1.05em;
+  color: rgba(14, 12, 12, 0.9);
+}
+
+.cv-section {
+  margin-bottom: 35px;
+}
+
+.cv-section h2 {
+  background: var(--light-bg);
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  border-left: 4px solid var(--primary-color);
+}
+
+.experience-item {
+  margin-bottom: 30px;
+  padding-left: 15px;
+  border-left: 3px solid var(--light-bg);
+  transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+  border-left-color: var(--primary-color);
+}
+
+.experience-item h3 {
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+  font-size: 1.25em;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.position-duration {
+  color: var(--muted-text);
+  font-style: italic;
+  margin-bottom: 15px;
+  display: inline-block;
+  background: var(--light-bg);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.95em;
+  margin-left: 10px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.summary-list li,
+.skills-section,
+.education-list li,
+.achievements-list li {
+  margin-bottom: 12px;
+}
+
+.nested-list {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.nested-list li {
+  margin-bottom: 8px;
+}
+
+.nested-list li:before {
+  content: "›";
+  color: var(--primary-color);
+}
+
+.project-item {
+  margin-bottom: 25px;
+  background: var(--light-bg);
+  padding: 15px 20px;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.project-item h3 {
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.project-item p {
+  margin-bottom: 8px;
+}
+
+strong {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 25px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .cv-header {
+    padding: 20px;
+    margin: -25px -25px 30px -25px;
+  }
+
+  .cv-header h1 {
+    font-size: 2em;
+  }
+
+  .experience-item {
+    padding-left: 10px;
+  }
+
+  .position-duration {
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}

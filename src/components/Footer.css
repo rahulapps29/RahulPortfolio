@@ -1,0 +1,20 @@
+/* Reuse your existing logo styles */
+.logo-image {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Smooth transitions */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .align-element {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

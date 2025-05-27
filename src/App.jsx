@@ -13,6 +13,8 @@ import HiringDetail from "./pages/HiringDetail";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import QuizPage from "./components/QuizPage";
+import CVPage from "./pages/CVpage";
+
 const App = () => {
   return (
     <Routes>
@@ -26,6 +28,7 @@ const App = () => {
         <Route path="/hiring" element={<Hiring />} />
         <Route path="/hiring/:jobId" element={<HiringDetail />} />
         <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/resume" element={<CVPage />} />
       </Route>
       <Route path="/clock" element={<DigitalClock />} />
       <Route path="/labels" element={<EditPrintLabels />} />

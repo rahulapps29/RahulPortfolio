@@ -31,13 +31,13 @@ const Hero = () => {
             >
               <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
-            <a
+            {/* <a
               href="https://twitter.com/rahulluthra"
               target="_blank"
               rel="noreferrer"
             >
               <FaTwitterSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
-            </a>
+            </a> */}
           </div>
         </article>
         <article className="hidden md:block">
