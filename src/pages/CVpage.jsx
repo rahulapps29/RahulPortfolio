@@ -1,11 +1,47 @@
-import React from "react";
 import "./CVpage.css";
-
+import React, { useState } from "react";
+import { FaDownload } from "react-icons/fa"; // At the top of your file
 const CVPage = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <div className="cv-container">
       <header className="cv-header">
-        <h1>RAHUL LUTHRA</h1>
+        <div className="cv-title-row">
+          <h1 className="cv-title">RAHUL LUTHRA</h1>
+
+          <div className="download-dropdown-wrapper">
+            <div className="download-dropdown">
+              <button onClick={toggleDropdown} className="download-button">
+                <FaDownload className="download-icon" />
+                Download CV
+              </button>
+              {dropdownOpen && (
+                <div className="dropdown-menu">
+                  <a
+                    href="/files/Rahul_Luthra_CV.pdf"
+                    download
+                    className="dropdown-link"
+                  >
+                    PDF
+                  </a>
+                  {/* <a
+                    href="/files/Rahul_Luthra_CV.docx"
+                    download
+                    className="dropdown-link"
+                  >
+                    DOCX
+                  </a> */}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
         <div className="contact-info">
           <p>
             <strong>Mobile:</strong> +91 9717740080
@@ -18,43 +54,58 @@ const CVPage = () => {
 
       <section className="cv-section">
         <h2>Professional Summary</h2>
-        <ul className="summary-list">
-          <li>
-            Passionate, customer-focused and result-oriented professional with
-            11+ years of experience in Data Analytics with exposure to tools
-            like{" "}
-            <strong>
-              Python (Pandas(multi-index), OS, NumPy, pandas), ACL, Arbutus,
-              SAS, SQL Server, Tableau, PowerBI & MS Excel (Advanced)
-            </strong>
-            .
-          </li>
-          <li>
-            Automated various <strong>ETL Projects</strong> and created various
-            dashboards in{" "}
-            <strong>Aviation (Pax Upgrade and baggage handling)</strong>, Health
-            care. Procure to pay (Split PO, rate variation), Telecom (Revenue
-            assurance).
-          </li>
-          <li>
-            Created mutiple full stack projects in{" "}
-            <strong>React Vite, Node Exress with MongoDB integration.</strong>{" "}
-            <br /> Have a good understanding of creating an API using{" "}
-            <strong>Nodejs</strong>, have expertise in Data object model
-            manipulation using <strong>JavaScript</strong>.
-          </li>
-        </ul>
+        <section className="cv-section">
+          <ul className="summary-list indented">
+            <li>
+              Customer-focused, results-driven professional with{" "}
+              <strong>11+ years of experience in Data Analytics</strong>,
+              proficient in tools such as{" "}
+              <strong>
+                Python (Pandas – including multi-indexing, NumPy, OS), SQL
+                Server, ACL, Arbutus, SAS, Tableau, Power BI, and Advanced Excel
+              </strong>
+              .
+            </li>
+            <li>
+              Successfully automated <strong>ETL processes</strong> and built
+              interactive dashboards across
+              <strong> Aviation (Pax Upgrade, Baggage Handling)</strong>,{" "}
+              <strong>Healthcare</strong>,
+              <strong>Procure-to-Pay (Split PO, Rate Variance)</strong>, and{" "}
+              <strong>Telecom (Revenue Assurance)</strong>.
+            </li>
+            <li>
+              Skilled in full-stack development using{" "}
+              <strong>React (Vite), Node.js, and MongoDB</strong>, with strong
+              knowledge of
+              <strong>REST API development</strong> and{" "}
+              <strong>JavaScript data model manipulation</strong>.
+            </li>
+          </ul>
+        </section>
       </section>
 
       <section className="cv-section">
         <h2>Key Skills</h2>
         <div className="skills-section">
-          <p>
-            <strong>VERTICALS:</strong> Consulting & Domain Experience in
-            Procure to Pay, Banking & Financial Services, Insurance, Aviation
-            and Healthcare. Good understanding of SAP tables. Reconciliation,
-            payroll (employee salary hike, promotion, gate entry analysis).
-          </p>
+          <ul className="summary-list indented">
+            <li>
+              <strong>Programming & Tools:</strong> Python (Pandas, NumPy,
+              Regex), SQL Server, SAS, ACL, Arbutus, Tableau, Power BI
+            </li>
+            <li>
+              <strong>Domains:</strong> Banking & Finance, Insurance,
+              Healthcare, Aviation, Telecom
+            </li>
+            <li>
+              <strong>Reporting:</strong> Dashboard creation, automation,
+              scheduled reporting
+            </li>
+            <li>
+              <strong>Specialized:</strong> Reconciliation, Payroll Audits, SAP
+              Table Analysis, Node.js API creation
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -181,7 +232,7 @@ const CVPage = () => {
         </div>
 
         <div className="experience-item">
-          <h3>Substrata! Solutions Pvt. Ltd.</h3>
+          <h3>Substratal Solutions Pvt. Ltd.</h3>
           <p className="position-duration">
             Data Analyst (December 2014 to April 2016)
           </p>
@@ -202,45 +253,48 @@ const CVPage = () => {
 
       <section className="cv-section">
         <h2>Projects Undertaken</h2>
-        <div className="project-item">
-          <h3>Continuous Control Monitoring</h3>
-          <p>
-            <strong>Objective:</strong> Schedule Audit reports of PAX Upgrade
-            and baggage handling in ACL Exchange which would be extracted by
-            Tableau server on daily basis.
-          </p>
-          <p>
-            <strong>Responsibilities:</strong> Performed the process end to end
-            from ACL scripting to dashboard creation in Tableau.
-          </p>
-        </div>
+        <div className="project-wrapper">
+          <div className="project-card">
+            <h3>Continuous Control Monitoring</h3>
+            <p>
+              <strong>Objective:</strong> Schedule Audit reports of PAX Upgrade
+              and baggage handling in ACL Exchange which would be extracted by
+              Tableau server on daily basis.
+            </p>
+            <p>
+              <strong>Responsibilities:</strong> Performed the process end to
+              end from ACL scripting to dashboard creation in Tableau.
+            </p>
+          </div>
 
-        <div className="project-item">
-          <h3>Scheduled reporting via Python</h3>
-          <p>
-            <strong>Objective:</strong> Scheduled reports from Teradata via as
-            Email Body on a daily basis via Python.
-          </p>
-          <p>
-            <strong>Responsibilities:</strong> Performed the process end to end
-            from python scripting using pandas, regex, smtp, getpass and various
-            modules of python and establishing Teradata connection to python.
-          </p>
-        </div>
+          <div className="project-card">
+            <h3>Scheduled reporting via Python</h3>
+            <p>
+              <strong>Objective:</strong> Scheduled reports from Teradata via as
+              Email Body on a daily basis via Python.
+            </p>
+            <p>
+              <strong>Responsibilities:</strong> Performed the process end to
+              end from python scripting using pandas, regex, smtp, getpass and
+              various modules of python and establishing Teradata connection to
+              python.
+            </p>
+          </div>
 
-        <div className="project-item">
-          <h3>Deployment of dashboards in Tableau and PowerBI</h3>
-          <p>
-            Created various charts in PowerBI like Pie, Line, Tree Map, Tabular,
-            Matrix, Funnel chart. Created Bookmarks, Page navigation link as
-            when required in the PowerBI dashboard.
-          </p>
+          <div className="project-card">
+            <h3>Deployment of dashboards in Tableau and PowerBI</h3>
+            <p>
+              Created various charts in PowerBI like Pie, Line, Tree Map,
+              Tabular, Matrix, Funnel chart. Created Bookmarks, Page navigation
+              link as when required in the PowerBI dashboard.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="cv-section">
         <h2>Academic Credentials</h2>
-        <ul className="education-list">
+        <ul className="education-list indented">
           <li>
             Bachelor in Technology (B. Tech) (Electronics & communication) from
             Maharishi Dayanand University, 2013.
@@ -258,7 +312,7 @@ const CVPage = () => {
 
       <section className="cv-section">
         <h2>Achievements</h2>
-        <ul className="achievements-list">
+        <ul className="achievements-list indented">
           <li>Won the Second Prize in the Technical Quiz in my college.</li>
           <li>
             Created a snippet automatic Path Finder in my tool Arbutus analyzer
