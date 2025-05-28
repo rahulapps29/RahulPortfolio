@@ -255,7 +255,10 @@ const CVPage = () => {
         <h2>Projects Undertaken</h2>
         <div className="project-wrapper">
           <div className="project-card">
-            <h3>Continuous Control Monitoring</h3>
+            <h3>
+              {" "}
+              <strong>Continuous Control Monitoring </strong>
+            </h3>
             <p>
               <strong>Objective:</strong> Schedule Audit reports of PAX Upgrade
               and baggage handling in ACL Exchange which would be extracted by
@@ -268,7 +271,10 @@ const CVPage = () => {
           </div>
 
           <div className="project-card">
-            <h3>Scheduled reporting via Python</h3>
+            <h3>
+              {" "}
+              <strong>Scheduled reporting via Python </strong>
+            </h3>
             <p>
               <strong>Objective:</strong> Scheduled reports from Teradata via as
               Email Body on a daily basis via Python.
@@ -282,11 +288,18 @@ const CVPage = () => {
           </div>
 
           <div className="project-card">
-            <h3>Deployment of dashboards in Tableau and PowerBI</h3>
+            <h3>
+              <strong>Power BI Deployment</strong>
+            </h3>
             <p>
-              Created various charts in PowerBI like Pie, Line, Tree Map,
-              Tabular, Matrix, Funnel chart. Created Bookmarks, Page navigation
-              link as when required in the PowerBI dashboard.
+              <strong>Objective:</strong>Built interactive dashboards with
+              bookmarks and page navigation .
+            </p>
+            <p>
+              <strong>Responsibilities:</strong>Created various charts in
+              PowerBI like Pie, Line, Tree Map, Tabular, Matrix, Funnel chart.
+              Created Bookmarks, Page navigation link as when required in the
+              PowerBI dashboard.
             </p>
           </div>
         </div>
