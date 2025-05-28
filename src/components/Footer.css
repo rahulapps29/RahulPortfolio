@@ -11,10 +11,40 @@
   transition: all 0.3s ease;
 }
 
+.logo-image.no-gap {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.flex.items-center.gap-0 {
+  font-size: 0;
+}
+
+.flex.items-center.gap-0 span {
+  font-size: 1.25rem; /* Adjust if needed (text-xl = 1.25rem in Tailwind) */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .align-element {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .logo-image.no-gap {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .flex.items-center.gap-0 {
+    font-size: 0;
+  }
+
+  .flex.items-center.gap-0 span {
+    font-size: 1.25rem; /* Adjust if needed (text-xl = 1.25rem in Tailwind) */
   }
 }

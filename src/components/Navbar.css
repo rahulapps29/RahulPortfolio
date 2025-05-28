@@ -36,4 +36,25 @@
   height: 40px;
   width: auto;
   vertical-align: middle;
+  /* border: 1px solid black; */
+}
+
+.logo-image {
+  margin-right: 0;
+  padding-right: 0;
+  display: inline-block;
+}
+
+.logo-image.no-gap {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+span.flex.items-center.gap-0 {
+  font-size: 0;
+}
+
+span.text-emerald-600 {
+  font-size: 1.875rem; /* Tailwind's text-3xl equivalent */
 }

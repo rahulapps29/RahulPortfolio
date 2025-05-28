@@ -12,14 +12,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo and copyright */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-0">
               <img
                 src="/images/logo/Rahul.png"
                 alt="Rahul Luthra Logo"
-                className="logo-image"
+                className="logo-image no-gap"
               />
-              <span className="text-emerald-600 text-xl font-bold">
-                Rahul Luthra
+              <span className="text-emerald-600 text-xl font-bold leading-none">
+                ahul&nbsp;Luthra
               </span>
             </Link>
             <p className="text-emerald-800 text-sm">

@@ -1,7 +1,7 @@
 /* CVPage.css - Professional Gradient Theme */
 :root {
   --primary-color: #3a7bd5; /* Main blue */
-  --primary-gradient: linear-gradient(to right, #f0fff0, #e0ffe0);
+  --primary-gradient: linear-gradient(to right, #d1fae5, #d1fae5);
   --secondary-color: #2c3e50; /* Dark blue */
   --accent-color: #4a6fa5; /* Medium blue */
   --light-bg: #f5f7fa; /* Light background */
@@ -39,7 +39,7 @@ body {
 }
 
 .cv-header h1 {
-  color: black;
+  color: #059669;
   margin-bottom: 10px;
   font-size: 2.5em;
   font-weight: 700;

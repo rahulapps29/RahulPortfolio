@@ -19,12 +19,16 @@ const Navbar = () => {
             onClick={handleLinkClick}
             className="text-3xl font-bold flex items-center"
           >
-            <img
-              src="/images/logo/Rahul.png"
-              alt="Rahul Luthra Logo"
-              className="logo-image"
-            />
-            <span className="text-emerald-600">&nbsp;Rahul&nbsp;Luthra</span>
+            <span className="flex items-center gap-0">
+              <img
+                src="/images/logo/Rahul_nbg.png"
+                alt="Rahul Luthra Logo"
+                className="logo-image no-gap"
+              />
+              <span className="text-emerald-600 leading-none">
+                ahul&nbsp;Luthra
+              </span>
+            </span>
           </Link>
 
           {/* Burger icon (visible only on small screens) */}

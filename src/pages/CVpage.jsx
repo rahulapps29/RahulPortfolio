@@ -21,7 +21,7 @@ const CVPage = () => {
         <ul className="summary-list">
           <li>
             Passionate, customer-focused and result-oriented professional with
-            10+ years of experience in Data Analytics with exposure to tools
+            11+ years of experience in Data Analytics with exposure to tools
             like{" "}
             <strong>
               Python (Pandas(multi-index), OS, NumPy, pandas), ACL, Arbutus,
