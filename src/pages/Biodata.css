@@ -1,0 +1,125 @@
+/* Full-height wrapper for sticky footer layout */
+.biodata-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content container takes full height minus button */
+.biodata-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom right, #fffdf7, #fdf6f0);
+}
+
+/* Biodata card */
+.biodata-card {
+  background-color: #ffffff;
+  border: 2px solid #c19a6b;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.biodata-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #8b5e3c;
+  border-bottom: 1px solid #c19a6b;
+  padding-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #8b5e3c;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed #c19a6b;
+}
+
+.biodata-section p,
+.biodata-section li {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+.biodata-section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.biodata-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* Sticky footer print button */
+.print-btn-wrapper {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff8ef;
+  border-top: 1px solid #e0c9a6;
+}
+
+.print-btn {
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.print-btn:hover {
+  opacity: 0.9;
+}
+
+/* Print styles */
+@media print {
+  body * {
+    visibility: hidden;
+    background-color: #ffffff;
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+    background-color: #ffffff;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  .biodata-container,
+  .biodata-wrapper {
+    background: none !important;
+    box-shadow: none !important;
+    /* padding: 0 !important;
+    margin: 0 !important; */
+    background-color: #ffffff;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  .print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    margin: 0;
+  }
+
+  .print-btn-wrapper,
+  .print-note {
+    display: none !important;
+  }
+}

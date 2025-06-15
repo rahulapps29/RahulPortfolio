@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 import QuizPage from "./components/QuizPage";
 import CVPage from "./pages/CVpage";
 import CVPage1 from "./pages/CVpage1";
+import Biodata from "./pages/Biodata";
 const App = () => {
   return (
     <Routes>
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-
+        <Route path="/biodata" element={<Biodata />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/hiring" element={<Hiring />} />
         <Route path="/hiring/:jobId" element={<HiringDetail />} />
@@ -34,6 +35,7 @@ const App = () => {
       <Route path="/clock" element={<DigitalClock />} />
       <Route path="/labels" element={<EditPrintLabels />} />
       <Route path="/urls" element={<UrlManager />} />
+      <Route path="/bio" element={<Biodata />} />
     </Routes>
   );
 };
