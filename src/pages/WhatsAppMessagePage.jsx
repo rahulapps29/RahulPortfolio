@@ -53,7 +53,7 @@ export default function WhatsAppMessagePage() {
           className="input"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
-          placeholder="9876543210"
+          placeholder="Mobile No."
         />
 
         <label className="form-label">Message</label>
