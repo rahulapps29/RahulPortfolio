@@ -7,13 +7,14 @@
   --light-bg: #f5f7fa; /* Light background */
   --text-color: #333; /* Main text */
   --muted-text: #7f8c8d; /* Secondary text */
+  --white-bg: #ffffff; /* Light background */
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-bg);
+  background-color: var(--white-bg);
   margin: 0;
   padding: 20px;
 }

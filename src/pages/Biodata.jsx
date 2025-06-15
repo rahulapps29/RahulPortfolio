@@ -10,6 +10,7 @@ const Biodata = () => {
         <div className="biodata-card print-area">
           <h2 className="biodata-heading">✦ Marriage Biodata ✦</h2>
 
+          {/* ----- Personal Details ----- */}
           <div className="biodata-section">
             <h3 className="section-title">Personal Details</h3>
             <p>
@@ -31,27 +32,21 @@ const Biodata = () => {
               <strong>Height:</strong> 5'10" (177.8 cm)
             </p>
             <p>
-              <strong>Languages:</strong> English, Hindi
-            </p>
-            <p>
-              <strong>Diet:</strong> Vegetarian
+              <strong>Diet:</strong> Non-Vegetarian
             </p>
             <p>
               <strong>Smoking/Drinking:</strong> No
             </p>
-            <p>
-              <strong>Languages:</strong> English, Hindi
-            </p>{" "}
-            {/* <-- This line */}
           </div>
 
+          {/* ----- Educational & Professional ----- */}
           <div className="biodata-section">
             <h3 className="section-title">
-              Educational & Professional Details
+              Educational &amp; Professional Details
             </h3>
             <p>
-              <strong>Education:</strong> B.Tech in Electronics & Communication
-              Engineering from Manav Rachna College of Engineering
+              <strong>Education:</strong> B.Tech in Electronics &amp;
+              Communication Engineering, Manav Rachna College of Engineering
             </p>
             <p>
               <strong>Profession:</strong> Working at EY India
@@ -65,8 +60,9 @@ const Biodata = () => {
             </p>
           </div>
 
+          {/* ----- Lifestyle & Personality ----- */}
           <div className="biodata-section">
-            <h3 className="section-title">Lifestyle & Personality</h3>
+            <h3 className="section-title">Lifestyle &amp; Personality</h3>
             <p>
               <strong>Hobbies:</strong> Travelling, Driving, Reading, Music,
               Technology
@@ -76,23 +72,25 @@ const Biodata = () => {
               diet
             </p>
             <p>
-              <strong>Personality Traits:</strong> Ambitious, Hardworking,
+              <strong>Personality Traits:</strong> Ambitious, Hard-working,
               Positive Thinker
             </p>
             <p>
-              <strong>Languages Known:</strong> Hindi, English, Understands
+              <strong>Languages Known:</strong> Hindi, English, understands
               Punjabi
             </p>
           </div>
 
+          {/* ----- Future Plans ----- */}
           <div className="biodata-section">
             <h3 className="section-title">Future Plans</h3>
             <p>
               I aspire to build AI-powered applications using ML and LLMs for
-              impactful decision-making and automation.
+              impactful automation and decision-making.
             </p>
           </div>
 
+          {/* ----- Family Background ----- */}
           <div className="biodata-section">
             <h3 className="section-title">Family Background</h3>
             <ul>
@@ -111,6 +109,7 @@ const Biodata = () => {
             </ul>
           </div>
 
+          {/* ----- Contact ----- */}
           <div className="biodata-section">
             <h3 className="section-title">Contact Details</h3>
             <p>
@@ -122,14 +121,10 @@ const Biodata = () => {
               <a href="mailto:rahulapps29@gmail.com">rahulapps29@gmail.com</a>
             </p>
           </div>
-
-          {/* <div className="biodata-footer">
-            <p>Suitable match from a respectable family is invited.</p>
-          </div> */}
         </div>
       </div>
 
-      {/* Sticky Footer Print Button */}
+      {/* Sticky footer print button */}
       <div className="print-btn-wrapper">
         <button onClick={handlePrint} className="print-btn">
           Print Biodata
