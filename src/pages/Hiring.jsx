@@ -5,7 +5,7 @@ import "./Hiring.css"; // Optional: only if you added custom styles
 
 const Hiring = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white px-6 py-12 md:px-16">
+    <div className="bg-gradient-to-br from-slate-50 to-white px-4 py-8 md:px-8">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
         🚀 We Are Hiring
       </h1>
