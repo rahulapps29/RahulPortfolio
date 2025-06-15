@@ -18,7 +18,7 @@
 .biodata-card {
   background-color: #ffffff;
   border: 2px solid #c19a6b;
-  padding: 0.7rem;
+  padding: 0.5rem;
   max-width: 1000px;
   width: 100%;
   border-radius: 10px;
@@ -27,7 +27,7 @@
 
 .biodata-heading {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: #8b5e3c;
   border-bottom: 1px solid #c19a6b;
