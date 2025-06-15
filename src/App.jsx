@@ -16,6 +16,7 @@ import QuizPage from "./components/QuizPage";
 import CVPage from "./pages/CVpage";
 import CVPage1 from "./pages/CVpage1";
 import Biodata from "./pages/Biodata";
+import WhatsAppMessagePage from "./pages/WhatsAppMessagePage";
 const App = () => {
   return (
     <Routes>
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/resume" element={<CVPage />} />
         <Route path="/resume1" element={<CVPage1 />} />
+        <Route path="/whatsapp" element={<WhatsAppMessagePage />} />
       </Route>
       <Route path="/clock" element={<DigitalClock />} />
       <Route path="/labels" element={<EditPrintLabels />} />
