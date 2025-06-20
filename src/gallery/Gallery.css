@@ -1,0 +1,83 @@
+/* ---------- Page shell ---------- */
+.proposal-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* ---------- Masonry grid ---------- */
+.gallery {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .gallery {
+    columns: 2;
+  }
+}
+@media (min-width: 900px) {
+  .gallery {
+    columns: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery {
+    columns: 4;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Image ---------- */
+.gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.01);
+}
+
+/* ---------- Empty state ---------- */
+.empty-msg {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,103 @@
+/* ───── Navbar Shell ───── */
+.g-nav {
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ecfdf5; /* emerald-50 */
+}
+
+/* ───── Inner Container ───── */
+.g-nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ───── Brand / Logo Text ───── */
+.g-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #064e3b; /* emerald-700 */
+  text-decoration: none;
+}
+
+/* ───── Burger Icon ───── */
+.burger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  user-select: none;
+}
+.burger div {
+  width: 26px;
+  height: 3px;
+  background: #065f46; /* emerald-800 */
+  transition: all 0.3s;
+}
+.burger.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle .line2 {
+  opacity: 0;
+}
+.burger.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 🔒 HIDE burger on screens ≥ 640px */
+@media (min-width: 640px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* ───── Tabs Container ───── */
+.g-tabs {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ecfdf5;
+  flex-direction: column;
+  display: none;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+
+.g-tabs.flex {
+  display: flex;
+}
+
+/* On desktop, show as row */
+@media (min-width: 640px) {
+  .g-tabs {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    margin-left: auto;
+    gap: 1rem;
+  }
+}
+
+/* ───── Tab Link Styles ───── */
+.g-tab {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #065f46; /* emerald-800 */
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.g-tab:hover {
+  background: #d1fae5; /* emerald-100 */
+}
+.g-tab.active {
+  background: #047857; /* emerald-600 */
+  color: #fff;
+}

@@ -1,0 +1,91 @@
+/* ───────────── Container ───────────── */
+.album {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: #333;
+  background-color: #fefefe;
+}
+
+/* ───────────── Top Title ───────────── */
+.hero-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #064e3b; /* emerald-800 */
+}
+
+/* ───────────── Album Section Title ───────────── */
+.album h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #047857; /* emerald-600 */
+  border-left: 4px solid #047857;
+  padding-left: 12px;
+  margin: 2rem 0 1rem;
+}
+
+/* ───────────── Grid / Cards ───────────── */
+.grid {
+  columns: 1;
+  column-gap: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    columns: 2;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    columns: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    columns: 4;
+  }
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ───────────── Empty State ───────────── */
+.empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin: 1rem 0 2rem;
+}
+
+/* Add this to CategoryGallery.css or AllGallery.css */
+.gallery-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}

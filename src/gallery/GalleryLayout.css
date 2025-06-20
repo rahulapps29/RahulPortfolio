@@ -1,0 +1,33 @@
+.gallery-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #444;
+}
+
+.tab:hover {
+  background: #e9ecef;
+}
+.active {
+  background: #007bff;
+  color: #fff;
+}
+.gallery-content {
+  padding: 2rem 1rem;
+}
