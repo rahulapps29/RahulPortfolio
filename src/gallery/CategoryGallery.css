@@ -1,7 +1,7 @@
 /* ───────────── Container (Responsive & Centered) ───────────── */
 .album {
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   margin-inline: auto;
   padding: 2rem 1rem;
   font-family: "Segoe UI", "Helvetica Neue", sans-serif;

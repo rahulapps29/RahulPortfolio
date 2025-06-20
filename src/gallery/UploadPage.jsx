@@ -1,7 +1,9 @@
 // src/gallery/UploadPage.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axiosInstance from "../api/axiosInstance";
 import "./UploadPage.css";
+
+const API_ORIGIN = "https://billback.orbe.in"; // same as baseURL
 
 const albums = [
   { value: "me", label: "My Photos" },
@@ -14,6 +16,24 @@ const UploadPage = () => {
   const [file, setFile] = useState(null);
   const [album, setAlbum] = useState("me");
   const [status, setStatus] = useState("");
+  const [images, setImages] = useState([]);
+
+  const fetchImages = async () => {
+    try {
+      const res = await axiosInstance.get(`/images/${album}`);
+      const fullUrls = (res.data.images || []).map(
+        (imgPath) => `${API_ORIGIN}${imgPath}`
+      );
+      setImages(fullUrls);
+    } catch (err) {
+      console.error("Failed to fetch images", err);
+      setImages([]);
+    }
+  };
+
+  useEffect(() => {
+    fetchImages();
+  }, [album]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,9 +49,23 @@ const UploadPage = () => {
       });
       setStatus("Uploaded ✔");
       setFile(null);
+      fetchImages();
     } catch (err) {
-      console.error(err);
+      console.error("Upload failed", err);
       setStatus("Failed ❌");
+    }
+  };
+
+  const handleDelete = async (imgUrl) => {
+    const filename = imgUrl.substring(imgUrl.lastIndexOf("/") + 1);
+    if (!window.confirm(`Delete ${filename}?`)) return;
+
+    try {
+      await axiosInstance.delete(`/images/${album}/${filename}`);
+      setImages((prev) => prev.filter((img) => img !== imgUrl));
+    } catch (err) {
+      console.error("Delete failed", err);
+      alert("Unable to delete file");
     }
   };
 
@@ -40,7 +74,6 @@ const UploadPage = () => {
       <h2>Upload New Photo</h2>
 
       <form onSubmit={handleSubmit} className="upload-form">
-        {/* Choose category */}
         <label className="select-label">
           Album&nbsp;
           <select
@@ -56,7 +89,6 @@ const UploadPage = () => {
           </select>
         </label>
 
-        {/* File picker */}
         <input
           type="file"
           accept="image/*"
@@ -66,6 +98,17 @@ const UploadPage = () => {
         <button type="submit">Upload</button>
         {status && <span className="status">{status}</span>}
       </form>
+
+      <div className="gallery-preview">
+        {images.map((imgUrl) => (
+          <div className="img-item" key={imgUrl}>
+            <img src={imgUrl} alt="Uploaded" />
+            <button className="delete-btn" onClick={() => handleDelete(imgUrl)}>
+              Delete
+            </button>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
