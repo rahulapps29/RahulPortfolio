@@ -1,7 +1,11 @@
 /* ───── Navbar Shell ───── */
 .g-nav {
+  background: linear-gradient(
+    to right,
+    #a7f3d0,
+    #5eead4
+  ); /* emerald-teal blend */
   border-bottom: 1px solid #e2e8f0;
-  background-color: #ecfdf5; /* emerald-50 */
 }
 
 /* ───── Inner Container ───── */
@@ -13,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  flex-wrap: wrap;
 }
 
 /* ───── Brand / Logo Text ───── */
@@ -35,7 +40,7 @@
 .burger div {
   width: 26px;
   height: 3px;
-  background: #065f46; /* emerald-800 */
+  background: #065f46;
   transition: all 0.3s;
 }
 .burger.toggle .line1 {
@@ -67,7 +72,6 @@
   padding: 0.5rem 1rem;
   z-index: 10;
 }
-
 .g-tabs.flex {
   display: flex;
 }
@@ -90,14 +94,24 @@
   padding: 0.4rem 0.9rem;
   border-radius: 6px;
   font-weight: 500;
-  color: #065f46; /* emerald-800 */
+  color: #065f46;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
 .g-tab:hover {
-  background: #d1fae5; /* emerald-100 */
+  background: #d1fae5;
 }
 .g-tab.active {
-  background: #047857; /* emerald-600 */
+  background: #047857;
+  color: #fff;
+}
+
+/* ───── Exit Tab as a Styled Tab ───── */
+.g-tab.exit {
+  border: 1px solid #10b981;
+  background: #d1fae5;
+}
+.g-tab.exit:hover {
+  background: #34d399;
   color: #fff;
 }

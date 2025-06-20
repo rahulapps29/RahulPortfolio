@@ -1,6 +1,6 @@
 // src/components/GalleryNavbar.jsx
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./GalleryNavbar.css";
 
 const albums = [
@@ -13,18 +13,17 @@ const albums = [
 
 const GalleryNavbar = () => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const isActive = (to) => pathname === to;
 
   return (
-    <nav className="g-nav bg-emerald-50">
+    <nav className="g-nav">
       <div className="g-nav-container">
         {/* Brand */}
-        <NavLink
-          to="/gallery"
-          className="g-brand"
-          onClick={() => setOpen(false)}
-        >
+        <Link to="/gallery" className="g-brand" onClick={() => setOpen(false)}>
           Family&nbsp;Album
-        </NavLink>
+        </Link>
 
         {/* Burger (mobile) */}
         <div
@@ -36,20 +35,23 @@ const GalleryNavbar = () => {
           <div className="line3"></div>
         </div>
 
-        {/* Tab links */}
+        {/* Tabs + Exit */}
         <div className={`g-tabs ${open ? "flex" : "hidden"} sm:flex`}>
           {albums.map(({ to, label }) => (
-            <NavLink
+            <Link
               key={to}
               to={to}
-              className={({ isActive }) =>
-                isActive ? "g-tab active" : "g-tab"
-              }
+              className={`g-tab ${isActive(to) ? "active" : ""}`}
               onClick={() => setOpen(false)}
             >
               {label}
-            </NavLink>
+            </Link>
           ))}
+
+          {/* Exit to main site */}
+          <Link to="/" className="g-tab" onClick={() => setOpen(false)}>
+            Exit&nbsp;↗
+          </Link>
         </div>
       </div>
     </nav>
